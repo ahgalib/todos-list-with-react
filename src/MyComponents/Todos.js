@@ -1,15 +1,15 @@
 import React from 'react'
-import {Todo} from './Todo'
+ import {TodoItem} from './TodoItem'
 
-export const  Todos = (props) =>{
+export const Todos = ({todos,onDelete}) => {
     return (
         <div className="container">
-            <h3>Todos List</h3>
-            {/* {props.todos} */}
-            {props.todos.map ((todo) =>{
-                return <Todo todo={todo} onDelete = {props.onDelete}/>
-            })}
+            <h3>All the todo are here(Todos list)</h3>
             
+            {/* <TodoItem todo={todos[0]}/> */}
+            {todos.map((todos)=>{
+                return <TodoItem todo={todos} onDelete = {onDelete}/>
+            })}
         </div>
     )
 }
