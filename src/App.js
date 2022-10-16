@@ -3,6 +3,7 @@ import './App.css'
 import Header from './MyComponents/Header'
 import {Todos} from './MyComponents/Todos'
 import {Footer} from './MyComponents/Footer'
+import AddTodo from './MyComponents/AddTodo'
 function App() {
  
   const onDelete = () => {
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
     <Header title="This is my Header Title" searchBar="false"/>
+    <AddTodo/>
     <Todos todos = {todos} onDelete = {onDelete}/>
     <Footer/>
     </>
