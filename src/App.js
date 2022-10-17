@@ -26,11 +26,15 @@ function App() {
       "desc":'To increase your knowlegde333'
     }
   ]
+
+  const getHandleChild = (child) => {
+    console.log(child)
+  }
   
   return (
     <>
     <Header title="This is my Header Title" searchBar="false"/>
-    <AddTodo/>
+    <AddTodo handleChild={getHandleChild}/>
     <Todos todos = {todos} onDelete = {onDelete}/>
     <Footer/>
     </>
